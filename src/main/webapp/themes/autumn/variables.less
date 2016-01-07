@@ -7,43 +7,19 @@
 //
 //## Gray and brand colors for use across Bootstrap.
 
-@gray-base:              #333;
+@gray-base:              #000;
 @gray-darker:            lighten(@gray-base, 13.5%); // #222
 @gray-dark:              lighten(@gray-base, 20%);   // #333
 @gray:                   lighten(@gray-base, 33.5%); // #555
 @gray-light:             lighten(@gray-base, 46.7%); // #777
 @gray-lighter:           lighten(@gray-base, 93.5%); // #eee
 
-@brand-primary:         #5b89db;
-@brand-success:         #58b957;
-@brand-info:            #56c0e0;
-@brand-warning:         #f2ae43;
-@brand-danger:          #db524b;
+@brand-primary:         #551C2B;
+@brand-success:         #088362;
+@brand-info:            #4b5184;
+@brand-warning:         #de6d07;
+@brand-danger:          #e31524;
 
-
-@font-face {
-  font-family: 'robotoregular';
-  src: url('fonts/Roboto-Regular-webfont.eot');
-  src: url('fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-  url('fonts/Roboto-Regular-webfont.woff') format('woff'),
-  url('fonts/Roboto-Regular-webfont.ttf') format('truetype'),
-  url('fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  src: url('fonts/opensans-regular-webfont.eot');
-  src: url('fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
-  url('fonts/opensans-regular-webfont.woff2') format('woff2'),
-  url('fonts/opensans-regular-webfont.woff') format('woff'),
-  url('fonts/opensans-regular-webfont.ttf') format('truetype'),
-  url('fonts/opensans-regular-webfont.svg#open_sansregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-
-}
 
 //== Scaffolding
 //
@@ -66,10 +42,10 @@
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-@font-family-sans-serif:  'robotoregular', 'Open Sans', 'Arial', sans-serif;
-@font-family-serif:       'robotoregular', 'Open Sans', 'Arial', sans-serif;
+@font-family-sans-serif:  arial,sans-serif;
+@font-family-serif:       arial,sans-serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
-@font-family-monospace:   'robotoregular', 'Open Sans', 'Arial', sans-serif;
+@font-family-monospace:   'Arial', sans-serif;
 @font-family-base:        @font-family-sans-serif;
 
 @font-size-base:          12px;
@@ -126,9 +102,9 @@
 @line-height-large:         1.3333333; // extra decimals for Win 8.1 Chrome
 @line-height-small:         1.5;
 
-@border-radius-base:        0px;
-@border-radius-large:       0px;
-@border-radius-small:       0px;
+@border-radius-base:        4px;
+@border-radius-large:       6px;
+@border-radius-small:       2px;
 
 //** Global color for active items (e.g., navs or dropdowns).
 @component-active-color:    #fff;
@@ -155,8 +131,8 @@
 //** Background color used for `.table-striped`.
 @table-bg-accent:               #f9f9f9;
 //** Background color used for `.table-hover`.
-@table-bg-hover:                #f5f5f5;
-@table-bg-active:               #F3F6FD;
+@table-bg-hover:                #fcf7f0;
+@table-bg-active:               @table-bg-hover;
 
 //** Border color for table and cell borders.
 @table-border-color:            #eee;
@@ -168,8 +144,8 @@
 
 @btn-font-weight:                normal;
 
-@btn-default-color:              @text-color;
-@btn-default-bg:                 #545765;
+@btn-default-color:              #fff;
+@btn-default-bg:                 #b89171;
 @btn-default-border:             darken(@btn-default-bg, 5%);
 
 @btn-primary-color:              #fff;
@@ -206,9 +182,9 @@
 @input-bg-disabled:              @gray-lighter;
 
 //** Text color for `<input>`s
-@input-color:                    #3b3b3b;
+@input-color:                    @gray;
 //** `<input>` border color
-@input-border:                   #e0e0e0;
+@input-border:                   #ccc;
 @input-border-focus:             #aeaeae;
 
 // TODO: Rename `@input-border-radius` to `@input-border-radius-base` in v4
@@ -221,7 +197,7 @@
 @input-border-radius-small:      @border-radius-small;
 
 //** Border color for inputs on focus
-@input-border-focus:             #aeaeae;
+@input-border-focus:             #66afe9;
 
 //** Placeholder text color
 @input-color-placeholder:        #999;
@@ -385,17 +361,17 @@
 @navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
 @navbar-collapse-max-height:       340px;
 
-@navbar-default-bg:                #545765;
-@navbar-default-hover-bg:          #424554;
-@navbar-default-color:             #f8f8f8;
+@navbar-default-bg:                @brand-primary;
+@navbar-default-hover-bg:          #f0f0f0;
+@navbar-default-color:             #FFFFFF;
 @navbar-default-border:            transparent;
 
 // Navbar links
 @navbar-default-link-color:                #FFF;
-@navbar-default-link-hover-color:          #f8f8f8;
-@navbar-default-link-hover-bg:             #424554;
+@navbar-default-link-hover-color:          #fff;
+@navbar-default-link-hover-bg:             #b89171;
 @navbar-default-link-active-color:         #fff;
-@navbar-default-link-active-bg:            #153d6c;
+@navbar-default-link-active-bg:            #b89171;
 @navbar-default-link-disabled-color:       #ccc;
 @navbar-default-link-disabled-bg:          transparent;
 
@@ -448,7 +424,7 @@
 @nav-disabled-link-hover-color:             @gray-light;
 
 //== Tabs
-@nav-tabs-border-color:                     #ddd;
+@nav-tabs-border-color:                     #f0f0f0;
 
 @nav-tabs-link-hover-border-color:          @gray-lighter;
 
@@ -727,15 +703,15 @@
 @panel-body-padding:          15px;
 @panel-heading-padding:       13px 15px;
 @panel-footer-padding:        @panel-heading-padding;
-@panel-border-radius:         @border-radius-base;
+@panel-border-radius:         0px;
 
 //** Border color for elements within panels
-@panel-inner-border:          #f0f0f0;
+@panel-inner-border:          #CFDBE2;
 @panel-footer-bg:             #FFF;
 
-@panel-default-text:          #fff;
-@panel-default-border:        #F0F0F0;
-@panel-default-heading-bg:    #545765;
+@panel-default-text:          @brand-primary;
+@panel-default-border:        lighten(@gray-dark,70%);
+@panel-default-heading-bg:    #fff;
 
 @panel-primary-text:          #fff;
 @panel-primary-border:        @brand-primary;
@@ -769,7 +745,7 @@
 //** Thumbnail border color
 @thumbnail-border:            #ddd;
 //** Thumbnail border radius
-@thumbnail-border-radius:     4px;
+@thumbnail-border-radius:     @border-radius-base;
 
 //** Custom text color for thumbnail captions
 @thumbnail-caption-color:     @text-color;
@@ -811,7 +787,7 @@
 @breadcrumb-padding-vertical:   1em;
 @breadcrumb-padding-horizontal: 1.167em;
 //** Breadcrumb background color
-@breadcrumb-bg:                 #F2F3F6;
+@breadcrumb-bg:                 #F7E7EC;
 //** Breadcrumb text color
 @breadcrumb-color:              #ccc;
 //** Text color of current page in the breadcrumb
@@ -824,9 +800,9 @@
 //
 //##
 
-@carousel-text-shadow:                        none;
+@carousel-text-shadow:                        0 1px 2px rgba(0,0,0,.6);
 
-@carousel-control-color:                      #808080;
+@carousel-control-color:                      #fff;
 @carousel-control-width:                      15%;
 @carousel-control-opacity:                    .5;
 @carousel-control-font-size:                  20px;
